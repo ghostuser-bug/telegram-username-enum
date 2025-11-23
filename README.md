@@ -80,7 +80,6 @@ python checker.py
 ---
 
 ## ⚠️ Legal Disclaimer
-
+```
 Use responsibly. Unauthorized enumeration or monitoring of accounts without consent may violate Telegram's terms of service or local laws. This tool is intended for **authorized security research and OSINT activities**.
-
 ```
