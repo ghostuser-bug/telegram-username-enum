@@ -27,8 +27,8 @@ Install packages:
 ```bash
 pip install -r requirements.txt
 ```
-📌 Telegram API Credentials
-
+## 📌 Telegram API Credentials
+```
 Register an application at my.telegram.org
  to obtain:
 
@@ -37,16 +37,16 @@ API Hash: Your API Hash
 Bot Token: Create a bot using BotFather
 Chat ID: Use @userinfobot to find your chat ID
 Update the script with your credentials before running.
-
-🚀 Usage
-
+```
+## 🚀 Usage
+```
 Clone repository and install requirements:
 
 git clone https://github.com/ghostuser-bug/telegram-username-enum.git
 cd telegram-username-enum
 pip install -r requirements.txt
 
-
+```
 Create words.txt in the same directory with usernames to check, one per line.
 
 Update credentials in checker.py:
@@ -61,7 +61,6 @@ Run the script:
 
 python checker.py
 
-
 The script checks each username from words.txt.
 
 Sends a message to your Telegram chat if a username is available.
@@ -69,5 +68,6 @@ Sends a message to your Telegram chat if a username is available.
 Pauses 10 seconds between checks to avoid hitting Telegram rate limits.
 
 ⚠️ Legal Disclaimer
-
+```
 Use responsibly. Unauthorized enumeration or monitoring of accounts without consent may violate Telegram's terms of service or local laws. This tool is intended for authorized security research and OSINT activities.
+```
