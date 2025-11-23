@@ -1,54 +1,73 @@
-# Telegram Username Checker
+# 🛡️ Telegram Username Enumeration Tool
 ![Logo](image.jpg)
 
-This script checks the availability of usernames on Telegram using the Telegram API. The script will check username based on words.txt file in the same directory. It sends a message to a specified chat when a username is available.
+This Python script automates **username availability checks on Telegram** using the Telegram API.  
+It is designed for **OSINT investigations, security audits, and account takeover risk assessment**, allowing security researchers to identify unclaimed usernames for analysis or monitoring.
 
-## ⚠️ Warning
-Please use a user account (phone number) for this script to work as Telegram will not allow bots to check usernames!
+> ⚠️ **Important:** Use a user account (phone number). Telegram restricts bots from checking usernames.
 
-## Requirements
+---
 
-To run this script, you need the following:
+## 🔐 Cybersecurity Use Cases
 
-- Python 3.7 or higher
-- The following Python packages:
+- **OSINT & reconnaissance**: Collect data about potential usernames for monitoring.  
+- **Account takeover risk assessment**: Identify available usernames tied to specific organizations or campaigns.  
+- **Security research & testing**: Validate username policy weaknesses or exposure.
+
+---
+
+## ⚙️ Requirements
+
+- Python 3.7+  
+- Python packages:
   - `pyrogram`
   - `requests`
 
-You can install the required packages using pip:
--`pip install -r requirements.txt`
-
-## Telegram API Credentials
-You need to obtain your Telegram API ID and API Hash by registering your application at my.telegram.org
+Install packages:
 ```bash
-API ID: Your API ID
-API Hash: Your API Hash
-Bot Token: Create a bot using BotFather and obtain the bot token.
-Chat ID: Use a bot like @userinfobot to get your chat ID.
-```
-## Usage
-
-1. Clone the repository and install the requirements:
-```bash
-git clone https://github.com/ghostuser-bug/telegram-username-checker.git
-cd telegram-username-checker
 pip install -r requirements.txt
 ```
-2. Create a file named words.txt in the same directory as the script. This file should contain a list of usernames to check, with each username on a new line.
+📌 Telegram API Credentials
 
-3. Update the script with your credentials:
-```bash
-api_id = YOUR_API_ID # Replace with your API ID
-api_hash = 'YOUR_API_HASH' # Replace with your API Hash
-bot_token = 'YOUR_BOT_TOKEN' # Replace with your bot token
-chat_id = 'YOUR_CHAT_ID' # Replace with your chat ID
-```
-4.Run the script:
-```bash
+Register an application at my.telegram.org
+ to obtain:
+
+ API ID: Your API ID
+API Hash: Your API Hash
+Bot Token: Create a bot using BotFather
+Chat ID: Use @userinfobot to find your chat ID
+Update the script with your credentials before running.
+
+🚀 Usage
+
+Clone repository and install requirements:
+
+git clone https://github.com/ghostuser-bug/telegram-username-enum.git
+cd telegram-username-enum
+pip install -r requirements.txt
+
+
+Create words.txt in the same directory with usernames to check, one per line.
+
+Update credentials in checker.py:
+
+api_id = YOUR_API_ID
+api_hash = 'YOUR_API_HASH'
+bot_token = 'YOUR_BOT_TOKEN'
+chat_id = 'YOUR_CHAT_ID'
+
+
+Run the script:
+
 python checker.py
-```
 
-### Notes
-The script will check each username from the words.txt file and will print whether the username is available or already taken.
-If a username is available, a message will be sent to the specified Telegram chat.
-The script pauses for 10 seconds between each username check to avoid hitting Telegram's rate limits.
+
+The script checks each username from words.txt.
+
+Sends a message to your Telegram chat if a username is available.
+
+Pauses 10 seconds between checks to avoid hitting Telegram rate limits.
+
+⚠️ Legal Disclaimer
+
+Use responsibly. Unauthorized enumeration or monitoring of accounts without consent may violate Telegram's terms of service or local laws. This tool is intended for authorized security research and OSINT activities.
